@@ -273,7 +273,7 @@ void getBestMove(const Board *b, TimeManagement *timeParams, MoveList legalMoves
         int tbScore, bool tbProbeSuccess, int threadID) {
     Move ponder = NULL_MOVE;
     Move bestMove = legalMoves.get(0);
-    uint64_t timeSoFar;
+    uint64_t timeSoFar=0;
 
     int bestScore = -INFTY, bestMoveIndex = -1;
     int rootDepth = 1;
